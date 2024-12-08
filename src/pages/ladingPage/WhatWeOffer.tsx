@@ -34,7 +34,7 @@ const WhatWeOffer = () => {
     
   return (
     <div className='py-[5rem] container'>
-        <h1 className='text-center text-4xl font-semibold'>What We Offer </h1>
+        <h1 className='text-center text-xl md:text-4xl font-semibold'>What We Offer </h1>
       
       <div className='py-10'>
         {accordainData.map((data,index)=>(

@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t py-3 border-[#B86DFF]">
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between items-center">
             <ul className="flex gap-2">
               <span className="flex justify-center items-center bg-primaryColor w-[2.5rem] h-[2.5rem] rounded-full">
                 <FacebookLogo size={25} color="white" />
@@ -30,19 +30,20 @@ const Footer = () => {
               <span className="flex justify-center items-center bg-primaryColor w-[2.5rem] h-[2.5rem] rounded-full">
                 <InstagramLogo size={25} color="white" />
               </span>
-              <span className="flex justify-center items-center bg-primaryColor w-[2.5rem] h-[2.5rem] rounded-full">
+              <span className="flex flex-col md:flex-row justify-center items-center bg-primaryColor w-[2.5rem] h-[2.5rem] rounded-full">
                 <XLogo size={25} color="white" />
               </span>
             </ul>
 
             {/* Navigation Links */}
-            <ul className="flex gap-6">
+            <ul className=" flex gap-6">
               <li>Home</li>
               <li>About</li>
               <li>Gallery</li>
               <li>Contact Us</li>
             </ul>
           </div>
+          {/* <p>  Powered by BELSOFT SYSTEMS LTD</p> */}
         </div>
       </div>
     </div>

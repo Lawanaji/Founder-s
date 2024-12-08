@@ -1,4 +1,3 @@
-
 interface SponsorProps {
     title: string;
     content: string;
@@ -30,81 +29,81 @@ const Sponsor = () => {
     ];
 
     return (
-        <div className="flex flex-col justify-center p-10 ">
+        <div className="flex flex-col justify-center px-4 md:px-[10%] py-6">
             {/* Title */}
-            <h1 className="md:whitespace-nowrap text-center text-3xl md:text-[2.6rem] font-bold">
+            <h1 className="text-center text-xl md:text-3xl lg:text-[2.6rem] font-bold mb-6">
                 Why Sponsor Founders Friday?
             </h1>
 
-            <div className="p-10 md:flex gap-10">
-                <div className="md:w-[80%] grid grid-cols-2 md:grid-cols-2 border-2 border-primaryColor p-6 gap-8 rounded-2xl shadow-2xl bg-white">
+            <div className="flex flex-col md:flex-row gap-[5rem]">
+                <div className="w-full md:w-[40%] grid grid-cols-1 p-10 sm:grid-cols-2 gap-8 border-2 border-primaryColor  rounded-2xl shadow-2xl bg-white">
                     {circleData.map((data, index) => (
                         <div
                             key={index}
-                            className={`flex flex-col p-2 justify-center items-center w-[10rem] h-[10rem] sm:w-[12rem] sm:h-[12rem] border-2 rounded-full text-center ${data.style}`}
+                            className={`flex flex-col justify-center p-2 items-center w-[20rem] h-[20rem] sm:w-[12rem] sm:h-[12rem] border-2 rounded-full text-center ${data.style}`}
                         >
-                            <h1 className=" text-lg md:text-lg font-extrabold">{data.title}</h1>
-                            <p>{data.content}</p>
+                            <h1 className="text-2xl md:text-xl p-2 font-extrabold">{data.title}</h1>
+                            <p className=" font-light md:text-sm p-2">{data.content}</p>
                         </div>
                     ))}
                 </div>
-                <div className="m-10">
-                    <h3 className="text-xl font-bold mb-4">How To Sponsor</h3>
-                        <strong className="text-lg font-light italic">Ready to make an impact?</strong>
-                    <p className="text-sm text-balance text-gray-600 mb-6">
-                      Fill out the form below or contact us at
-                        [contact email/phone number] to learn more about how you can sponsor
-                        the next Founders Friday.
+
+                <div className="w-full md:w-1/3 space-y-6">
+                    <h3 className="text-lg md:text-xl font-bold">How To Sponsor</h3>
+                    <p className="text-sm md:text-base italic font-light">
+                        Ready to make an impact?
+                    </p>
+                    <p className="text-sm text-gray-600">
+                        Fill out the form below or contact us at [contact email/phone number] to
+                        learn more about how you can sponsor the next Founders Friday.
                     </p>
 
-                    <form className="space-y-4 ">
-                        <div className="flex gap-5">
-                            <div className="flex flex-col">
-                                <label className="text-lg font-bold" htmlFor="name">
+                    <form className="space-y-6">
+                        <div className="flex flex-col md:flex-row gap-4">
+                            <div className="flex flex-col w-full">
+                                <label className="text-sm md:text-base font-bold" htmlFor="name">
                                     Name
                                 </label>
                                 <input
                                     type="text"
                                     id="name"
-                                    className="border border-[#121212] px-8 py-4 outline-none rounded-xl"
+                                    className="border border-[#121212] px-4 py-2 rounded-xl outline-none w-full"
                                     placeholder="Full name"
                                 />
                             </div>
-
-                            <div className="flex flex-col">
-                                <label className="text-lg font-bold" htmlFor="company">
+                            <div className="flex flex-col w-full">
+                                <label className="text-sm md:text-base font-bold" htmlFor="company">
                                     Company (optional)
                                 </label>
                                 <input
                                     type="text"
                                     id="company"
-                                    className="border border-[#121212] px-8 py-4 outline-none rounded-xl"
+                                    className="border border-[#121212] w-full px-4 py-2 rounded-xl outline-none "
                                     placeholder="Company name"
                                 />
                             </div>
                         </div>
 
-                        <div className="flex gap-5">
-                            <div className="flex flex-col">
-                                <label className="text-lg font-bold" htmlFor="email">
+                        <div className="flex flex-col md:flex-row gap-4">
+                            <div className="flex flex-col w-full">
+                                <label className="text-sm md:text-base font-bold" htmlFor="email">
                                     Email
                                 </label>
                                 <input
                                     type="email"
                                     id="email"
-                                    className="border border-[#121212] px-8 py-4 outline-none rounded-xl"
+                                    className="border border-[#121212] px-4 py-2 rounded-xl outline-none w-full"
                                     placeholder="Email address"
                                 />
                             </div>
-
-                            <div className="flex flex-col">
-                                <label className="text-lg font-bold" htmlFor="phone">
+                            <div className="flex flex-col w-full">
+                                <label className="text-sm md:text-base font-bold" htmlFor="phone">
                                     Phone
                                 </label>
                                 <input
                                     type="tel"
                                     id="phone"
-                                    className="border border-[#121212] px-8 py-4 outline-none rounded-xl"
+                                    className="border border-[#121212] px-10 py-2 rounded-xl outline-none w-full"
                                     placeholder="Phone number"
                                 />
                             </div>
@@ -112,7 +111,7 @@ const Sponsor = () => {
 
                         <button
                             type="submit"
-                            className=" bg-primaryColor text-white font-medium py-4 px-8 rounded mt-4 hover:bg-primaryColor-dark"
+                            className="bg-primaryColor text-white font-medium py-3 px-6 rounded hover:bg-primaryColor-dark w-full md:w-auto"
                         >
                             Sponsor →
                         </button>

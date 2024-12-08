@@ -13,8 +13,8 @@ const WhoWeAre = () => {
           <div className="bg-[url('/src/assets/img/line1.png')] bg-no-repeat bg-center bg-contain my-6 relative md:-right-4 xl:-right-10">
           </div>
 
-          <div className='col-span-5 space-y-[1.6rem] px-5 text-center md:text-left lg:text-left'>
-              <h2 className='text-4xl lg:text-6xl font-extrabold'>Who We Are!</h2>
+          <div className='col-span-5 space-y-[1.6rem] md:px-5  md:text-left lg:text-left'>
+              <h2 className='text-2xl lg:text-6xl font-extrabold'>Who We Are!</h2>
               <p className='text-lg lg:text-xl'>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi sed dignissimos maiores vero autem totam? Adipisci minus nemo assumenda quos tempora dignissimos mollitia, molestias obcaecati sed libero dolorum maxime quibusdam?
               </p>

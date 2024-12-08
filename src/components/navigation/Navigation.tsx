@@ -2,15 +2,14 @@ import { useState } from 'react';
 import logo from '../../assets/img/Frame 8.svg';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from '@phosphor-icons/react';
-
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="container">
       <nav className="w-full h-[100px] flex items-center justify-between bg-white fixed px-5 md:px-10 top-0 left-0 z-50 border-b-gray-500 border">
-     
-        <img src={logo} alt="Logo" className="" />
+        
+        <img src={logo} alt="Logo" className="w-[12rem] h-[12rem] md:w-[12rem] md:h-[12rem] object-contain" />
 
            <button
           className="block md:hidden text-gray-600 focus:outline-none"
