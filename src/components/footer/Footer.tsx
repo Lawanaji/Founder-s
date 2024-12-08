@@ -43,7 +43,7 @@ const Footer = () => {
               <li>Contact Us</li>
             </ul>
           </div>
-          {/* <p>  Powered by BELSOFT SYSTEMS LTD</p> */}
+          <p className='text-center'>  Powered by BELSOFT SYSTEMS LTD</p>
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
-import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
-import attendee from "../../assets/img/Ellipse 309.png";
+import Slider from 'react-slick';
+import { ArrowLeft, ArrowRight} from "@phosphor-icons/react";
+import attendee from '../../assets/img/Ellipse 309.png'
 
 const AttendeesComment = () => {
   const sliderRef = useRef<Slider | null>(null);
@@ -11,10 +11,10 @@ const AttendeesComment = () => {
   const [settings] = useState({
     dots: false,
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
+    autoplay: false,
+    speed: 1000,
     autoplaySpeed: 2000,
     cssEase: "linear",
     pauseOnHover: false,
@@ -22,6 +22,31 @@ const AttendeesComment = () => {
     focusOnSelect: false,
     accessibility: false,
     mobileFirst: true,
+         
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3, 
+          slidesToScroll: 1, 
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 768, 
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 480, 
+        settings: {
+          slidesToShow: 1, 
+          slidesToScroll: 1,
+        }
+      }
+    ]
   });
 
   const testimonials = [
@@ -86,24 +111,26 @@ const AttendeesComment = () => {
         <Slider
           ref={sliderRef}
           {...settings}
-          className="flex flex-col md:flex-row md:space-x-8 overflow-hidden"
+          className="flex flex-col justify-center md:flex-row md:space-x-8 overflow-hidden px-10"
         >
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center max-w-xs"
+              className="flex justify-center text-center max-w-xs"
             >
-              <div className="w-32 h-32 rounded-full border-4 border-purple-600 p-2">
+             <div className="px-[5rem]">
+             <div className="w-32 h-32 rounded-full border-4 border-purple-600 p-2">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="w-full h-full rounded-full object-cover"
                 />
               </div>
+             </div>
               <h3 className="mt-4 text-lg font-bold text-gray-900">
                 {testimonial.name}
               </h3>
-              <p className="mt-2 text-gray-700 text-sm">{testimonial.feedback}</p>
+              <p className="mt-2 text-gray-700 text-sm text-balance">{testimonial.feedback}</p>
             </div>
           ))}
         </Slider>
