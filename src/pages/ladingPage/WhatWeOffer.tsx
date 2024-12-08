@@ -1,5 +1,5 @@
 import { Minus, Plus } from '@phosphor-icons/react'
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 interface AccordainProps {
     title: string;
@@ -7,7 +7,7 @@ interface AccordainProps {
 }
 
 const WhatWeOffer = () => {
-    const [Accordain, setAccordain] = useState<number>(0)
+    const [Accordain] = useState<number>(0)
     const accordainData: AccordainProps[]=[
         {
             title: 'Monthly Meetups',

@@ -1,5 +1,5 @@
 import { CaretDown, CaretUp } from "@phosphor-icons/react";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const FAQs = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
