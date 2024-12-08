@@ -1,5 +1,6 @@
 import { CaretDown, CaretUp } from "@phosphor-icons/react";
 import { useState } from "react";
+import Accordiom from "./Accordiom";
 
 const FAQs = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -38,8 +39,8 @@ const FAQs = () => {
       <h2 className="text-2xl sm:text-3xl font-bold mb-5">
         FAQs
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 px-10">
-        {faqs.map((faq, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-10">
+        {/* {faqs.map((faq, index) => (
           <div key={index} className="">
             <div
               className={`flex ${
@@ -62,7 +63,16 @@ const FAQs = () => {
               </p>
             )}
           </div>
-        ))}
+        ))} */}
+        {
+          faqs.map((faq, index) => (
+            <Accordiom key={faq.question}
+              title={faq.question}
+              content={faq.answer}
+              className={(faqs.length - 1) !== index ? "mb-4" : ""}
+            />
+          ))
+        }
       </div>
     </div>
   );

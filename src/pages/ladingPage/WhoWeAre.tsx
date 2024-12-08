@@ -4,7 +4,7 @@ import { ArrowRight } from '@phosphor-icons/react';
 import dollarBag from '../../assets/img/Money Bag.svg'
 const WhoWeAre = () => {
   return (
-    <div className='w-full min-h-[400px] grid grid-cols-1 md:grid-cols-2 gap-10 -mt-4 px-[5%]'>
+    <div className='w-full min-h-[400px] grid grid-cols-1 md:grid-cols-2 gap-10 -mt-4 px-[5%] mb-[5rem]'>
         <div>
           <img src={aboutImage} alt="Image" className='w-full h-auto object-cover' />
         </div>

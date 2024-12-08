@@ -29,7 +29,7 @@ const Sponsor = () => {
     ];
 
     return (
-        <div className="flex flex-col justify-center px-4 md:px-[10%] py-6">
+        <div className="flex flex-col justify-center px-4 md:px-[10%] py-[10rem] mb-[5rem]">
             {/* Title */}
             <h1 className="text-center text-xl md:text-3xl lg:text-[2.6rem] font-bold mb-6">
                 Why Sponsor Founders Friday?
