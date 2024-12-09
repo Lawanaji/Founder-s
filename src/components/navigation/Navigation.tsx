@@ -33,11 +33,11 @@ const Navigation = () => {
 
        
         <ul
-          className={`absolute md:static top-[200px] left-0 w-full md:w-auto bg-white md:flex md:items-center md:justify-between md:gap-14 transition-all duration-300 ease-in-out ${
-            isMenuOpen ? 'block' : 'hidden'
+          className={`absolute md:static top-[100px] left-0 w-full md:w-auto bg-white md:flex md:items-center md:justify-between md:gap-14 transition-all duration-300 ease-in-out ${
+            isMenuOpen ? 'block ' : 'hidden'
           }`}
         >
-          <NavLinkComponent isMenuOpen={false} />
+          <NavLinkComponent isMenuOpen={true} />
           <li className="text-center py-2 md:py-0">
             <Link
               to="/register"

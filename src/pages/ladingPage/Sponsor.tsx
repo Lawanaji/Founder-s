@@ -40,7 +40,7 @@ const Sponsor = () => {
                     {circleData.map((data, index) => (
                         <div
                             key={index}
-                            className={`flex flex-col justify-center p-2 items-center w-[20rem] h-[20rem] sm:w-[12rem] sm:h-[12rem] border-2 rounded-full text-center ${data.style}`}
+                            className={`flex flex-col justify-center p-2 items-center w-[17rem] h-[17rem] sm:w-[12rem] sm:h-[12rem] border-2 rounded-full text-center ${data.style}`}
                         >
                             <h1 className="text-2xl md:text-xl p-2 font-extrabold">{data.title}</h1>
                             <p className=" font-light md:text-sm p-2">{data.content}</p>

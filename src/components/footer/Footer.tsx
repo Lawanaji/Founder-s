@@ -8,7 +8,7 @@ import NavLinkComponent from '../navigation/NavLink';
 
 const Footer = () => {
   return (
-    <div className="py-[5rem]">
+    <div className="py-[2rem]">
       <div className="border-t border-[#75687E] space-y-5 px-[5%]">
         <img src={footerLogo} alt="footer_logo" className="w-40" />
 
@@ -39,10 +39,10 @@ const Footer = () => {
               </span>
             </ul>
 
-            {/* Navigation Links */}
+            
            <NavLinkComponent isMenuOpen={false} />
           </div>
-          <p className="text-center py-10">Powered by BELSOFT SYSTEMS LTD</p>
+          <p className="text-center py-5">Powered by BELSOFT SYSTEMS LTD</p>
         </div>
       </div>
     </div>

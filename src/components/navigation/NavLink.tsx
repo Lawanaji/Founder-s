@@ -44,7 +44,7 @@ const NavLinkComponent = ({ isMenuOpen}: Props) => {
       );
     };
   return (
-    <ul   className={`absolute md:static top-[100px] left-0 w-full md:w-auto bg-white md:flex md:items-center md:justify-between md:gap-14 transition-all duration-300 ease-in-out ${
+    <ul   className={`absolute md:static left-0 w-full md:w-auto bg-white md:flex md:items-center md:justify-between md:gap-14 transition-all duration-300 ease-in-out ${
         isMenuOpen ? 'block' : 'hidden'
       }`}>
       
