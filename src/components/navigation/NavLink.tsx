@@ -1,5 +1,4 @@
-import { ArrowRight } from '@phosphor-icons/react';
-import { Link, useLocation } from 'react-router-dom';
+import {  useLocation } from 'react-router-dom';
 interface Props{
     isMenuOpen: boolean
 }
