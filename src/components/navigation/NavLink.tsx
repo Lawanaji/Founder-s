@@ -45,7 +45,7 @@ const NavLinkComponent = ({ isMenuOpen}: Props) => {
       );
     };
   return (
-    <ul   className={`absolute md:static left-0 w-full md:w-auto bg-white md:flex md:items-center md:justify-between md:gap-14 transition-all duration-300 ease-in-out ${
+    <ul   className={`absolute md:static left-0 w-full md:w-auto bg-white md:flex md:items-center md:justify-between md:gap-5 transition-all duration-300 ease-in-out ${
         isMenuOpen ? 'block' : 'hidden'
       }`}>
       
@@ -54,15 +54,7 @@ const NavLinkComponent = ({ isMenuOpen}: Props) => {
             <NavLink nav={item} />
           </li>
         ))}
-          <li className="text-center py-2 md:py-0">
-            <Link
-              to="/register"
-              className="px-10 py-2 flex justify-center items-center gap-2 border border-primaryColor text-primaryColor rounded-xl transition"
-            >
-              Register
-              <ArrowRight  size={20} weight="bold" />
-            </Link>
-          </li>
+         
     </ul>
   )
 }

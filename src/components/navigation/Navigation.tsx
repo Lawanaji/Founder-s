@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import logo from '../../assets/img/Frame 8.svg';
-
+import { Link} from 'react-router-dom';
+import { ArrowRight } from '@phosphor-icons/react';
 import NavLinkComponent from './NavLink';
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +38,15 @@ const Navigation = () => {
           }`}
         >
           <NavLinkComponent isMenuOpen={true} />
-        
+          <li className="text-center py-2 md:py-0">
+            <Link
+              to="/register"
+              className="px-10 py-2 flex justify-center items-center gap-2 border border-primaryColor text-primaryColor rounded-xl transition"
+            >
+              Register
+              <ArrowRight  size={20} weight="bold" />
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>
