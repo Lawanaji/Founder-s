@@ -1,33 +1,47 @@
 import { useState } from 'react';
 import logo from '../../assets/img/Frame 8.svg';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight } from '@phosphor-icons/react';
 const Navigation = () => {
+  const { pathname } = useLocation(); 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navlink = [
     {
       name: "Home",
-      lable: "Home",
+      label: "Home",
       path: "/"
     },
     {
       name: "About Us",
-      lable: "About Us",
+      label: "About Us",
       path: "/aboutUs"
     },
     {
       name: "Gallary",
-      lable: "Gallary",
+      label: "Gallary",
       path: "/gallary"
     },
     {
       name: "Contact Us",
-      lable: "Constact Us",
+      label: "Constact Us",
       path: "/contactus"
     }
   ]
+  const NavLink = ({ nav }: { nav: { name: string; label: string; path: string } }) => {
+    const isActive = pathname === nav.path;
 
+    return (
+      <a
+        href={nav.path}
+        className={`text-sm px-5 py-2 flex rounded-lg ${
+          isActive ? ' text-primaryColor' : 'text-gray-800  text-center py-2 md:py-0'
+        }`}
+      >
+        {nav.label}
+      </a>
+    );
+  };
   return (
     <div className="container">
       <nav className="w-full h-[100px] flex items-center justify-between bg-white fixed px-5 md:px-10 top-0 left-0 z-50 border-b-gray-500 border">
@@ -60,18 +74,11 @@ const Navigation = () => {
             isMenuOpen ? 'block' : 'hidden'
           }`}
         >
-          <li className="text-gray-800 hover:text-primaryColor text-center py-2 md:py-0">
-            <Link to="/">Home</Link>
+             {navlink.map((item) => (
+          <li key={item.name}>
+            <NavLink nav={item} />
           </li>
-          <li className="text-gray-800 hover:text-primaryColor text-center py-2 md:py-0">
-            <Link to="/about">About Us</Link>
-          </li>
-          <li className="text-gray-800 hover:text-primaryColor text-center py-2 md:py-0">
-            <Link to="/gallery">Gallery</Link>
-          </li>
-          <li className="text-gray-800 hover:text-primaryColor text-center py-2 md:py-0">
-            <Link to="/contact">Contact Us</Link>
-          </li>
+        ))}
           <li className="text-center py-2 md:py-0">
             <Link
               to="/register"
