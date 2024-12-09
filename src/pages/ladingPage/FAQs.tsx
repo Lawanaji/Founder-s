@@ -1,13 +1,12 @@
-import { CaretDown, CaretUp } from "@phosphor-icons/react";
-import { useState } from "react";
+
 import Accordiom from "./Accordiom";
 
 const FAQs = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  // const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleAccordion = (index: number) => {
-    setOpenIndex(index === openIndex ? null : index);
-  };
+  // const toggleAccordion = (index: number) => {
+  //   setOpenIndex(index === openIndex ? null : index);
+  // };
 
   const faqs = [
     {

@@ -5,6 +5,29 @@ import { ArrowRight } from '@phosphor-icons/react';
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const navlink = [
+    {
+      name: "Home",
+      lable: "Home",
+      path: "/"
+    },
+    {
+      name: "About Us",
+      lable: "About Us",
+      path: "/aboutUs"
+    },
+    {
+      name: "Gallary",
+      lable: "Gallary",
+      path: "/gallary"
+    },
+    {
+      name: "Contact Us",
+      lable: "Constact Us",
+      path: "/contactus"
+    }
+  ]
+
   return (
     <div className="container">
       <nav className="w-full h-[100px] flex items-center justify-between bg-white fixed px-5 md:px-10 top-0 left-0 z-50 border-b-gray-500 border">
