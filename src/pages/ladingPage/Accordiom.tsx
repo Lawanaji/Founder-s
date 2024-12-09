@@ -5,6 +5,7 @@ interface Props {
     title: string;
     content: string;
     className?: string;
+    
 }
 
 const Accordiom = ({title, content, className}: Props) => {

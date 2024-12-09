@@ -1,12 +1,16 @@
+
 import buttonArrow from '../../assets/img/arrow.svg';
 import footerLogo from '../../assets/img/footer_logo.png';
 import { FacebookLogo, InstagramLogo, XLogo } from '@phosphor-icons/react';
+import NavLinkComponent from '../navigation/NavLink';
+
+
 
 const Footer = () => {
   return (
     <div className="py-[5rem]">
       <div className="border-t border-[#75687E] space-y-5 px-[5%]">
-   <img src={footerLogo} alt="footer_logo" className="w-40" />
+        <img src={footerLogo} alt="footer_logo" className="w-40" />
 
         <div className="flex justify-center items-center h-[50vh]">
           <div className="text-center">
@@ -30,20 +34,15 @@ const Footer = () => {
               <span className="flex justify-center items-center bg-primaryColor w-[2.5rem] h-[2.5rem] rounded-full">
                 <InstagramLogo size={25} color="white" />
               </span>
-              <span className="flex flex-col md:flex-row justify-center items-center bg-primaryColor w-[2.5rem] h-[2.5rem] rounded-full">
+              <span className="flex justify-center items-center bg-primaryColor w-[2.5rem] h-[2.5rem] rounded-full">
                 <XLogo size={25} color="white" />
               </span>
             </ul>
 
             {/* Navigation Links */}
-            <ul className=" flex gap-6">
-              <li>Home</li>
-              <li>About</li>
-              <li>Gallery</li>
-              <li>Contact Us</li>
-            </ul>
+           <NavLinkComponent isMenuOpen={false} />
           </div>
-          <p className='text-center'>  Powered by BELSOFT SYSTEMS LTD</p>
+          <p className="text-center py-10">Powered by BELSOFT SYSTEMS LTD</p>
         </div>
       </div>
     </div>
